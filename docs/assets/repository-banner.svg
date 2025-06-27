@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="480" viewBox="0 0 1440 480" role="img" aria-labelledby="title desc">
+  <title id="title">AI Operations Copilot</title>
+  <desc id="desc">Agentic incident investigation with RAG, tool calling, root-cause analysis, human approval, and evaluation.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#070a0f"/><stop offset="1" stop-color="#0b1422"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="72%" cy="42%" r="54%">
+      <stop offset="0" stop-color="#3b82f6" stop-opacity=".16"/><stop offset="1" stop-color="#3b82f6" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse">
+      <path d="M36 0H0V36" fill="none" stroke="#89a9d2" stroke-opacity=".07"/>
+    </pattern>
+    <filter id="blur"><feGaussianBlur stdDeviation="12"/></filter>
+  </defs>
+  <rect width="1440" height="480" rx="18" fill="url(#bg)"/>
+  <rect width="1440" height="480" rx="18" fill="url(#grid)"/>
+  <rect width="1440" height="480" rx="18" fill="url(#glow)"/>
+  <g transform="translate(100 104)">
+    <rect width="44" height="44" fill="#dcecff"/>
+    <path d="M13 23l6 6 13-16" fill="none" stroke="#08111d" stroke-width="4" stroke-linecap="square"/>
+    <text x="0" y="112" fill="#eef5ff" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="64" font-weight="700" letter-spacing="-2">AI Operations Copilot</text>
+    <text x="2" y="166" fill="#79adf8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="27" font-weight="500">Agentic Incident Investigation</text>
+    <line x1="2" y1="205" x2="590" y2="205" stroke="#33465f"/>
+    <text x="2" y="246" fill="#91a0b4" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="16" letter-spacing="1">RAG • TOOL CALLING • RCA • HUMAN-IN-THE-LOOP • EVALUATION</text>
+  </g>
+  <g transform="translate(912 92)" fill="none" stroke-linecap="square">
+    <path d="M18 212H92L132 126H210L250 172H330L374 82" stroke="#294665" stroke-width="2"/>
+    <path d="M18 252H110L158 210H236L284 262H394" stroke="#1e334b" stroke-width="2"/>
+    <g fill="#0d1826" stroke="#609bea" stroke-width="2">
+      <rect x="0" y="194" width="36" height="36"/><rect x="114" y="108" width="36" height="36"/>
+      <rect x="192" y="108" width="36" height="36"/><rect x="232" y="154" width="36" height="36"/>
+      <rect x="356" y="64" width="36" height="36"/>
+    </g>
+    <circle cx="158" cy="210" r="7" fill="#79adf8" stroke="none"/>
+    <circle cx="284" cy="262" r="7" fill="#4c7fbf" stroke="none"/>
+    <path d="M92 310h300M92 326h220M92 342h256" stroke="#4b6685" stroke-opacity=".45"/>
+  </g>
+  <rect x=".5" y=".5" width="1439" height="479" rx="17.5" fill="none" stroke="#263548"/>
+</svg>
