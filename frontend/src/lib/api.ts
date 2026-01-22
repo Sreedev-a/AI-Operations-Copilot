@@ -1,5 +1,6 @@
 export const API=process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
-export async function getJSON<T>(path:string):Promise<T>{const r=await fetch(`${API}${path}`,{cache:"no-store"});if(!r.ok)throw new Error(`API ${r.status}`);return r.json()}
+const requestBase=()=>typeof window === "undefined" ? (process.env.API_INTERNAL_URL || API) : API;
+export async function getJSON<T>(path:string):Promise<T>{const r=await fetch(`${requestBase()}${path}`,{cache:"no-store"});if(!r.ok)throw new Error(`API ${r.status}`);return r.json()}
 export async function postJSON<T>(path:string,body:unknown={}):Promise<T>{const r=await fetch(`${API}${path}`,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(body)});if(!r.ok)throw new Error(`API ${r.status}`);return r.json()}
 export type Incident={id:string;title:string;description:string;service:string;environment:string;severity:string;status:string;created_at:string;investigator:string;ai_state:string;root_cause:string;recommended_action:string;investigation?:Investigation;approval?:{decision:string;verification:string}}
 export type Investigation={state:string;trace:Array<{id:number;timestamp:string;step:string;summary:string;tool?:string;latency_ms:number}>;evidence:Array<{source:string;summary:string}>;hypotheses:Array<{rank:number;title:string;confidence:number;level:string;supporting_evidence:string[];contradicting_evidence:string[]}>;recommendation:{action:string;reason:string;service:string;risk:string;expected_outcome:string;simulated:boolean};usage:{message:string}}
